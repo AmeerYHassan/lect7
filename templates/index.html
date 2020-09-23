@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href={{ url_for("static", filename="styles.css") }} />
+    </head>
+    <body>
+        <h1>Hello, World!</h1>
+        <ol>
+            {%for i in range(0, artistsLen)%}
+                <li>{{favArtists[i]}}</li>
+                <img src="/static/{{pictures[i]}}"></img>
+            {%endfor%}
+        </ol>
+    </body>
+</html>
